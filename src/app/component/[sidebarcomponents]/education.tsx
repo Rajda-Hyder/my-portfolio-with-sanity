@@ -6,7 +6,7 @@ import {
 
 export default function Education() {
   {/*my education details*/ }
-  let education = [{
+  const educationDetail = [{
     institution: "Governer House marquee",
     date: "feb 2024 - continue",
     degree: "giaic",
@@ -43,7 +43,7 @@ export default function Education() {
                 <CardContent>
 
           <div className="-my-8 divide-y-2 divide-gray-300">
-            {education.map((item, i) => (
+            {educationDetail.map((item, i) => (
               <div key={i} className="py-8 flex flex-wrap md:flex-nowrap">
                 <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
                   <span className="font-bold title-font text-gray-900 uppercase">

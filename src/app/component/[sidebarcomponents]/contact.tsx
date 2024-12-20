@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Contact(){
   
@@ -33,12 +34,12 @@ export default function Contact(){
           <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
             
             <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=rajdahyder@gmail.com"  target="_blank" style={{display:"inline-flex"}}>
-                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" style={{ width: '24px', height: '24px', marginRight: '8px' }} />rajdahyder@gmail.com
+                <Image src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" width={300} height={300} style={{ width: '24px', height: '24px', marginRight: '8px' }} />rajdahyder@gmail.com
             </Link>
 
             
             <Link href="https://wa.me/+923333862809" target="_blank" style={{display:"inline-flex"}}>
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp" style={{ width: '24px', height: '24px', marginRight: '8px' }} />Whatsapp
+                <Image src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="whatsapp" width={300} height={300} style={{ width: '24px', height: '24px', marginRight: '8px' }} />Whatsapp
             </Link>
 
           </div>

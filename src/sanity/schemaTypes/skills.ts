@@ -1,3 +1,4 @@
+//import type { Rule } from "@sanity/types";
 export const skills = {
     name: "mySkills",
     type: "document",
@@ -19,13 +20,16 @@ export const skills = {
             title: "Details",
         },
         {
-            name: "image",
-            type :"image",
-            title :"image",
-            options: {
-                accept: 'image/png'
-              }
+            title: 'image',
+            name: 'image',
+            type: 'image'
+          },
+        //   {
+        //     name: "href",
+        //     type :"url",
+        //     title :"Link",
+        //     validation: (Rule:Rule) => Rule.uri({ scheme: ["http", "https"] }),
             
-        }
+        // }
     ],
 }

@@ -11,7 +11,7 @@ interface Project {
   projectName: string;
   ProjLang: string;
   ProjDetails: string;
-  image: any; // Use a specific type if your image object has a defined structure
+  image:"image" ; // Use a specific type if your image object has a defined structure
   href: string;
 }
 

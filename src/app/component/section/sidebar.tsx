@@ -114,7 +114,10 @@ export function SidebarItems({ icon, text, active, alert, href }: SidebarItemsPr
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const section = document.querySelector(href);
-    section && section.scrollIntoView({ behavior: "smooth" });
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    
   };
 
   return (

@@ -1,3 +1,5 @@
+import type { Rule } from "@sanity/types";
+
 export const project = {
     name: "myProject",
     type: "document",
@@ -20,16 +22,16 @@ export const project = {
         },
         {
             name: "image",
-            type :"image",
-            title :"image",
-            
+            type: "image",
+            title: "image",
+
         },
         {
-            name: "href",
-            type :"url",
-            title :"Link",
-            validation: (Rule:any) => Rule.uri({ scheme: ["http", "https"] }),
-            
+         name: "href",
+        type : "url",
+        title : "Link",
+        validation: (Rule: Rule) => Rule.uri({ scheme: ["http", "https"] }),
+
         }
     ],
 }

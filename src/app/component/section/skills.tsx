@@ -1,32 +1,28 @@
+import React from "react";
 import { client } from "@/sanity/lib/client";
-import { urlFor } from "@/sanity/sanityImage";
+import { urlFor } from "@/sanity/lib/image";
+import Image from "next/image";
 import Link from "next/link";
-
 
 interface Skill {
   SkillName: string;
   CommandOnSkill: string;
   Details: string;
-  image?: {
-    _type: "image";
-    asset: {
-      _ref: string;
-      _type: "reference";
-    };
-  };
+  image?: string; 
+  alt?: string;
 }
 
 // Fetch skills data from Sanity
-async function skillData() {
-  const fetchData = await client.fetch(
+async function fetchSkillsData(): Promise<Skill[]> {
+  const data = await client.fetch(
     `*[_type == 'mySkills']{SkillName, CommandOnSkill, Details, image}`
   );
-  return fetchData;
+  return data;
 }
 
 export default async function Skills() {
   // Fetch skills data
-  const data: Skill[] = await skillData();
+  const data: Skill[] = await fetchSkillsData();
 
   // Handle empty or undefined data
   if (!data || data.length === 0) {
@@ -50,16 +46,20 @@ export default async function Skills() {
             key={index}
             className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col"
           >
-             {/* Icon */}
-             <div className="mr-20">
-  {skill.image && (
-    <img
-      src={urlFor(skill.image).url()} // Generate and render the image URL
-      alt={skill.SkillName}
-      className="h-32 w-[550px] object-cover" // Ensure the image fills the container proportionally
-    />
-  )}
-</div>
+            {/* Icon */}
+            <div className="container mr-20">
+            <div className="relative w-full h-64">
+            {skill.image && (
+                    <Image
+                      src={urlFor(skill.image).url()} // Generate URL from Sanity image
+                      alt={skill.SkillName || "skill Image"}
+                      layout="fill"
+                      objectFit="cover"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  )}</div>
+
+            </div>
             <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0">
               <h2 className="text-gray-900 text-2xl title-font font-medium mb-2 underline">
                 {skill.SkillName}
@@ -71,9 +71,9 @@ export default async function Skills() {
             </div>
           </div>
         ))}
-        {/* button */}
+        {/* Button */}
         <button className="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mr-10">
-          <Link href={"#"}>HOME</Link>
+          <Link href={"/"}>HOME</Link>
         </button>
       </div>
     </section>

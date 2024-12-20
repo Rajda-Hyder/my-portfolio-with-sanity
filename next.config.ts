@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["cdn.sanity.io"], // Add the Sanity CDN domain here
+    domains: ["cdn.sanity.io","url","cdn-icons-png.flaticon.com"], // Add the Sanity CDN domain here
   },
 };
 

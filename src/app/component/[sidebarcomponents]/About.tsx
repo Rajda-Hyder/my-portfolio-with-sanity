@@ -34,12 +34,11 @@ export default function About() {
             </div>
 
             <div>
-                <h1 className="text-center font-pacifico text-2xl font-bold text-wrap">"Creating seamless digital experiences
-                    with clean code and modern design."</h1>
+                <h1 className="text-center font-pacifico text-2xl font-bold text-wrap">Creating seamless digital experiences with clean code and modern design.</h1>
                 <div className="flex items-start mt-16 justify-center min-h-screen">
                     <div className="w-2/4 h-1/3 p-8 bg-white shadow-md rounded-lg border text-center hover:shadow-lg hover:bg-gray-50 transition">
-                        <p className="text-gray-700 text-lg font-semibold">Hi! I'm <span className="font-serif">
-                            Syeda Rajda Bano</span>, a<strong className="text-blue-500"> Full Stack Developer</strong> passionate about crafting modern,
+                        <p className="text-gray-700 text-lg font-semibold">Hi! I am <span className="font-serif">
+                            Syeda Rajda Bano</span> a<strong className="text-blue-500"> Full Stack Developer</strong> passionate about crafting modern,
                             responsive, and user-focused web applications.</p>
 
                         {/* Icons for Skills */}
@@ -56,7 +55,7 @@ export default function About() {
                             JavaScript,Tailwind CSS, HTML</span>, and<span className="underline hover:text-blue-600">
                                 Python</span>,I specialize in turning complex ideas into functional, efficient solutions.
 
-                            Whether I'm building intuitive user interfaces or designing scalable back-end systems, I take pride
+                            Whether I am building intuitive user interfaces or designing scalable back-end systems, I take pride
                             in delivering applications that are both visually appealing and performance-optimized.</p>
 
                         {/* Icons for Highlights */}
@@ -69,14 +68,14 @@ export default function About() {
                         <p className="text-gray-700 text-lg font-semibold mt-4"> My favorite tools include<span className="font-extrabold text-blue-500"> Next.js</span> for its flexibility,
                             TypeScript for robust code, and Tailwind CSS for clean,<span className="font-semibold text-gray-800">responsive design</span>.
 
-                            I’m constantly expanding my skill set, staying up-to-date with the latest technologies,
+                            I am constantly expanding my skill set, staying up-to-date with the latest technologies,
                             and exploring innovative solutions to solve real-world problems. My ultimate goal is to contribute
                             to projects that make a meaningful impact.
 
-                            When I’m not coding, I enjoy exploring new design trends. Check out my
+                            When I am not coding, I enjoy exploring new design trends. Check out my
                             <Link href={"#Projects"}>
                                 <button className="hover:bg-green-400 text-white bg-blue-400 px-2"> projects</button></Link>
-                            or <Link href={"#Contact"}> <button className="hover:bg-green-400 text-white bg-blue-400 px-2">reach out</button> </Link>—I'd love to connect!
+                            or <Link href={"#Contact"}> <button className="hover:bg-green-400 text-white bg-blue-400 px-2">reach out</button> </Link>—I&apos;d love to connect!
                             {/* button */}
                             <button className="flex mx-auto mt-20 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg mr-10">
                                 <Link href={"#"}>HOME</Link>
